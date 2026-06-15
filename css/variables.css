@@ -1,0 +1,42 @@
+/* 
+   ANAMIKA SWEETS - Branding & Design Tokens Variables
+   Edit CSS variables here to customize layout styling parameters.
+*/
+
+:root {
+  /* HSL Color System - Configurable Primary & Secondary */
+  --primary-hue: 24;
+  --primary: hsl(var(--primary-hue), 95%, 53%);             /* Rich Saffron */
+  --primary-dark: hsl(var(--primary-hue), 95%, 43%);        /* Dark Saffron */
+  --primary-soft: hsl(var(--primary-hue), 100%, 96%);       /* Soft saffron wash */
+  --accent-gold: hsl(45, 100%, 50%);                       /* Royal Gold */
+  
+  /* Gradients for Premium Visual Polish */
+  --saffron-gradient: linear-gradient(135deg, hsl(24, 95%, 55%), hsl(16, 95%, 45%));
+  --gold-gradient: linear-gradient(135deg, hsl(45, 100%, 58%), hsl(35, 100%, 42%));
+  
+  /* Light Mode Palette */
+  --bg-main: hsl(30, 20%, 98%);                             /* Warm luxurious linen white */
+  --bg-surface: hsl(0, 0%, 100%);
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --border-color: hsl(30, 15%, 90%);
+  --text-main: hsl(24, 25%, 12%);
+  --text-muted: hsl(24, 10%, 45%);
+  --shadow-color: rgba(249, 115, 22, 0.06);
+  --shadow: 0 10px 30px -10px var(--shadow-color);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius: 16px;
+  --font-main: 'Outfit', sans-serif;
+}
+
+/* Dark Mode Palette overrides */
+[data-theme="dark"] {
+  --bg-main: hsl(220, 15%, 8%);                               /* #111317 */
+  --bg-surface: hsl(220, 15%, 12%);                           /* #1A1D23 */
+  --bg-surface-glass: rgba(17, 24, 39, 0.85);
+  --border-color: hsl(220, 15%, 18%);                         /* #272C35 */
+  --text-main: hsl(0, 0%, 95%);                               /* #F2F2F2 */
+  --text-muted: hsl(220, 10%, 65%);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --primary-soft: hsl(var(--primary-hue), 30%, 15%);
+}

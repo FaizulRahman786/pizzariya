@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('anamika-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About ANAMIKA SWEETS - Saharanpur's finest culinary reference point for premium sweets, fine bakery standards, and family-friendly dining.">
+  <meta name="theme-color" content="#f97316">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Anamika Sweets">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="About Us — ANAMIKA SWEETS">
+  <meta property="og:description" content="Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
+  <meta property="og:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <meta property="og:url" content="https://anamisweat.vercel.app/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us — ANAMIKA SWEETS">
+  <meta name="twitter:description" content="Saharanpur's finest premium sweets, bakery & restaurant.">
+  <meta name="twitter:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <link rel="canonical" href="https://anamisweat.vercel.app/about.html">
+
+  <title>About Us — ANAMIKA SWEETS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+  <!-- Font Awesome for sleek modern vector icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+
+  <!-- Shared utilities, central config, layout loader, translations, and schema generators -->
+  <script src="utils.js" defer></script>
+  <script src="config.js" defer></script>
+  <script src="layout.js?v=9" defer></script>
+  <script src="translations.js?v=9" defer></script>
+  <script src="schema.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Reusable component mount points -->
+  <div id="preloader-mount">
+    <div id="luxury-preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-container">
+          <div class="logo-halo-ring logo-halo-1"></div>
+          <div class="logo-halo-ring logo-halo-2"></div>
+          <div class="logo-outer-ring"></div>
+          <div class="logo-vector-badge">
+            <svg class="luxury-monogram-svg" viewBox="0 0 100 100">
+              <circle class="monogram-border-outer" cx="50" cy="50" r="44" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="1.5" />
+              <circle class="monogram-border-inner" cx="50" cy="50" r="41" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="0.75" opacity="0.5" />
+              <path class="monogram-star star-n" d="M50 12 L51.5 15 L50 18 L48.5 15 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-s" d="M50 82 L51.5 85 L50 88 L48.5 85 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-w" d="M12 50 L15 51.5 L18 50 L15 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-e" d="M82 50 L85 51.5 L88 50 L85 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <text class="monogram-letter" x="50" y="62" font-family="'Playfair Display', serif" font-size="34" font-weight="700" text-anchor="middle" fill="url(#gold-gradient-monogram)">A</text>
+              <defs>
+                <linearGradient id="gold-gradient-monogram" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b38728" />
+                  <stop offset="30%" stop-color="#fbf5b7" />
+                  <stop offset="50%" stop-color="#da1b60" />
+                  <stop offset="70%" stop-color="#fbf5b7" />
+                  <stop offset="100%" stop-color="#aa771c" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-text" id="preloader-brand-name">ANAMIKA SWEETS</div>
+        <div class="preloader-sub" id="preloader-tagline">SAFFRON LOUNGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar Mount -->
+  <div id="navbar-mount"></div>
+
+  <main id="main-content">
+
+  <!-- Banner Spacer -->
+  <div style="height: 80px;"></div>
+
+  <!-- About Header Hero -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="aurora-container">
+      <div class="aurora-blob aurora-blob-1"></div>
+      <div class="aurora-blob aurora-blob-2"></div>
+    </div>
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('images/hero_slider_1.png');"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-tagline">Since 2000</span>
+      <h1 style="font-size: 3rem;">About <span id="about-brand-name">ANAMIKA SWEETS</span></h1>
+      <p>An elite destination for traditional Indian sweets and fine family dining experiences.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="about" style="background: var(--bg-surface);">
+    <div class="section-header">
+      <span>Our Principles</span>
+      <h2>HYGIENE & PREMIUM TASTE</h2>
+      <p>We blend ancient confectionery craft with cutting-edge kitchen hygiene standards to craft perfect celebrations.</p>
+    </div>
+    
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <h3>Quality & Freshness</h3>
+        <p>Hand-picked fresh ingredients, authentic traditional spices, and absolute hygienic cooking parameters.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-medal"></i>
+        </div>
+        <h3>Top Rated Taste</h3>
+        <p>Winner of community local awards, backed by hundreds of positive client and group booking reviews.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3>Perfect for Families</h3>
+        <p>Elegant and comfortable indoor seating layout catering beautifully to large family groups and events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sweet Crafting Excellence Section -->
+  <section class="features" style="background: var(--bg-main); padding-top: 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; align-items: center; padding: 50px 0;">
+      <div>
+        <img src="images/hero_slider_2.png" alt="Sweet Crafting" loading="lazy" decoding="async" width="1024" height="1024" style="border-radius: var(--radius); width: 100%; box-shadow: var(--shadow);">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <span style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Handcrafted Heritage</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.3rem;">Pure Desi Ghee & Fresh Saffron Ingredients</h2>
+        <p style="color: var(--text-muted); line-height: 1.8;">Our sweet makers are traditional artisans who have mastered the art of balancing sweetness and flavor. Every bite of our Kaju Katli, Pedas, and Shahi Kheer carries the hallmark of authentic heritage, slow-cooked in pure Desi Ghee and seasoned with hand-sourced Kashmiri saffron.</p>
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <div style="text-align: center; border-right: 1px solid var(--border-color); padding-right: 30px;">
+            <strong style="font-size: 2rem; color: var(--primary); display: block;">100%</strong>
+            <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Vegetarian</span>
+          </div>
+          <div style="text-align: center;">
+            <strong style="font-size: 2rem; color: var(--primary); display: block;">26+</strong>
+            <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase;">Years Legacy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast alerts container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  </main>
+
+  <!-- Reusable layout mount points -->
+  <div id="box-builder-mount"></div>
+  <div id="whatsapp-widget-mount"></div>
+  <div id="mobile-actions-mount"></div>
+  <div id="footer-mount"></div>
+
+  <!-- Premium Centralized Configuration and Data -->
+  <script src="data.js" defer></script>
+  <!-- Premium Interactive Logic Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

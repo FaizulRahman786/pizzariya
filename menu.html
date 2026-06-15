@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('anamika-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore ANAMIKA SWEETS Menu - A dynamic range of premium traditional sweets, hand-crafted bakery creations, and North Indian family recipes.">
+  <meta name="theme-color" content="#f97316">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Anamika Sweets">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Our Culinary Menu — ANAMIKA SWEETS">
+  <meta property="og:description" content="Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
+  <meta property="og:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <meta property="og:url" content="https://anamisweat.vercel.app/menu.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Culinary Menu — ANAMIKA SWEETS">
+  <meta name="twitter:description" content="Saharanpur's finest premium sweets, bakery & restaurant.">
+  <meta name="twitter:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <link rel="canonical" href="https://anamisweat.vercel.app/menu.html">
+
+  <title>Our Culinary Menu — ANAMIKA SWEETS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+  <!-- Font Awesome for sleek modern vector icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+
+  <!-- Shared utilities, central config, layout loader, translations, and schema generators -->
+  <script src="utils.js" defer></script>
+  <script src="config.js" defer></script>
+  <script src="layout.js?v=9" defer></script>
+  <script src="translations.js?v=9" defer></script>
+  <script src="schema.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Reusable component mount points -->
+  <div id="preloader-mount">
+    <div id="luxury-preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-container">
+          <div class="logo-halo-ring logo-halo-1"></div>
+          <div class="logo-halo-ring logo-halo-2"></div>
+          <div class="logo-outer-ring"></div>
+          <div class="logo-vector-badge">
+            <svg class="luxury-monogram-svg" viewBox="0 0 100 100">
+              <circle class="monogram-border-outer" cx="50" cy="50" r="44" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="1.5" />
+              <circle class="monogram-border-inner" cx="50" cy="50" r="41" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="0.75" opacity="0.5" />
+              <path class="monogram-star star-n" d="M50 12 L51.5 15 L50 18 L48.5 15 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-s" d="M50 82 L51.5 85 L50 88 L48.5 85 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-w" d="M12 50 L15 51.5 L18 50 L15 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-e" d="M82 50 L85 51.5 L88 50 L85 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <text class="monogram-letter" x="50" y="62" font-family="'Playfair Display', serif" font-size="34" font-weight="700" text-anchor="middle" fill="url(#gold-gradient-monogram)">A</text>
+              <defs>
+                <linearGradient id="gold-gradient-monogram" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b38728" />
+                  <stop offset="30%" stop-color="#fbf5b7" />
+                  <stop offset="50%" stop-color="#da1b60" />
+                  <stop offset="70%" stop-color="#fbf5b7" />
+                  <stop offset="100%" stop-color="#aa771c" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-text" id="preloader-brand-name">ANAMIKA SWEETS</div>
+        <div class="preloader-sub" id="preloader-tagline">SAFFRON LOUNGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar Mount -->
+  <div id="navbar-mount"></div>
+
+  <main id="main-content">
+
+  <!-- Banner Spacer -->
+  <div style="height: 80px;"></div>
+
+  <!-- Menu Header Hero -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="aurora-container">
+      <div class="aurora-blob aurora-blob-1"></div>
+      <div class="aurora-blob aurora-blob-2"></div>
+    </div>
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('images/hero_slider_2.png');"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-tagline">Signature Delicacies</span>
+      <h1 style="font-size: 3rem;" data-translate="tasteTitle">Culinary Masterpieces</h1>
+      <p>Savor fresh, hand-crafted, award-winning traditional Indian sweets, bakery specials, and rich hot platters.</p>
+      <button class="btn-primary" id="open-brochure-btn" style="margin-top: 20px; font-size: 0.9rem; padding: 10px 24px;">
+        <i class="fa-solid fa-book-open"></i> View 3D Menu Booklet
+      </button>
+    </div>
+  </section>
+
+  <!-- Featured Menu Section with Tabs -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <span>Taste the Tradition</span>
+      <h2 data-translate="tasteTitle">Our Premium Menu Selection</h2>
+      <p>Explore a selection of our finest traditional sweets, bakery specialties, and rich mains.</p>
+    </div>
+    
+    <!-- Premium Search Bar -->
+    <div class="menu-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" id="menu-search" placeholder="Search delicious sweets, bakery items, or main courses..." aria-label="Search Menu Items">
+      <button id="search-clear-btn" aria-label="Clear Search Input"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    
+    <!-- Taste Matcher Interactive Quiz Banner -->
+    <div class="taste-matcher-banner" id="taste-matcher-banner">
+      <div class="taste-matcher-header">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3>Find Your Perfect Taste Match!</h3>
+        <p>Play our quick 3-step flavor quiz and get a personalized menu combination.</p>
+        <button class="btn-primary" id="start-quiz-btn" style="padding: 10px 20px; font-size: 0.9rem; border-radius: 20px;">Start Taste Quiz</button>
+      </div>
+      <div class="taste-matcher-quiz" id="taste-matcher-quiz" style="display: none;">
+        <!-- Step 1 -->
+        <div class="quiz-step active" data-step="1">
+          <h4>1. What's the mood of your celebration?</h4>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="festival"><i class="fa-solid fa-cake-candles"></i> Festive / Family Feast</button>
+            <button class="quiz-opt" data-val="romantic"><i class="fa-solid fa-heart"></i> Romantic Evening</button>
+            <button class="quiz-opt" data-val="gathering"><i class="fa-solid fa-users"></i> Casual Kitty / Group</button>
+            <button class="quiz-opt" data-val="cravings"><i class="fa-solid fa-cookie-bite"></i> Late Night Cravings</button>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="quiz-step" data-step="2" style="display: none;">
+          <h4>2. What flavor profile are you craving?</h4>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="rich-sweet"><i class="fa-solid fa-ice-cream"></i> Rich Sweet & Creamy</button>
+            <button class="quiz-opt" data-val="spicy-savory"><i class="fa-solid fa-pepper-hot"></i> Hot & Spiced Mains</button>
+            <button class="quiz-opt" data-val="flaky-bakery"><i class="fa-solid fa-bread-slice"></i> Flaky Fresh Bakery</button>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="quiz-step" data-step="3" style="display: none;">
+          <h4>3. Who is participating in the feast?</h4>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="everyone"><i class="fa-solid fa-face-smile"></i> Everyone (All Ages)</button>
+            <button class="quiz-opt" data-val="diet"><i class="fa-solid fa-leaf"></i> Light & Balanced Diet</button>
+            <button class="quiz-opt" data-val="sweet-lovers"><i class="fa-solid fa-candy-cane"></i> Die-hard Sweet Lovers</button>
+          </div>
+        </div>
+        <!-- Result Screen -->
+        <div class="quiz-step" data-step="result" style="display: none;">
+          <div class="quiz-result-card">
+            <i class="fa-solid fa-gift result-gift-icon"></i>
+            <h4>Your Perfect Match: <span id="quiz-result-title">...</span></h4>
+            <p id="quiz-result-desc" style="max-width: 500px; margin: 10px auto; font-size: 0.95rem; color: var(--text-muted);"></p>
+            <div class="quiz-result-actions" style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
+              <button class="btn-primary" id="quiz-add-combo-btn">Add Platter to Cart</button>
+              <button class="btn-secondary" id="quiz-reset-btn">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-filter="all">All Dishes</button>
+      <button class="tab-btn" data-filter="sweets">Premium Sweets</button>
+      <button class="tab-btn" data-filter="bakery">Fine Bakery</button>
+      <button class="tab-btn" data-filter="mains">North Indian</button>
+    </div>
+    
+    <div class="menu-grid" id="menu-grid">
+      <!-- Dishes cards will be rendered dynamically by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Toast alerts container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Interactive Modal for Success Message -->
+  <div class="modal" id="success-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>Order Confirmed!</h3>
+        <p class="modal-subtitle">Your details have been processed, downloaded as a receipt, and forwarded via email.</p>
+        <pre id="modal-msg"></pre>
+        <button class="btn-modal-close" id="modal-close-btn">
+          <i class="fa-solid fa-circle-check"></i> Complete and Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- Reusable layout mount points -->
+  <div id="box-builder-mount"></div>
+  <div id="whatsapp-widget-mount"></div>
+  <div id="mobile-actions-mount"></div>
+  <div id="footer-mount"></div>
+  
+  <!-- Virtual 3D Page-Flipping Menu Booklet -->
+  <div class="brochure-modal" id="brochure-modal">
+    <div class="brochure-overlay" id="brochure-overlay"></div>
+    <div class="brochure-container">
+      <button class="brochure-close" id="brochure-close-btn">&times;</button>
+      <div class="book" id="book">
+        <!-- Page 1 (Front Cover) -->
+        <div class="page cover-front" style="background: linear-gradient(135deg, #1c2025, #0f1215); border: 2px solid var(--accent-gold); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; text-align: center;">
+          <div style="border: 1px solid var(--accent-gold); padding: 30px; border-radius: 12px; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="images/logo.png" alt="Anamika Sweets — Saffron Lounge" loading="lazy" decoding="async" width="1024" height="1024" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--accent-gold); margin-bottom: 20px;" id="brochure-logo-img">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent-gold); letter-spacing: 4px; margin-bottom: 10px;" id="brochure-brand-name-front">ANAMIKA</h2>
+            <span style="font-size: 0.8rem; letter-spacing: 5px; color: var(--text-muted); text-transform: uppercase;" id="brochure-tagline">Saffron Lounge</span>
+            <div style="width: 40px; height: 1px; background: var(--accent-gold); margin: 25px 0;"></div>
+            <p style="font-size: 0.85rem; font-style: italic; color: #a0aec0; line-height: 1.6;">"A premium legacy of sweetness and authentic dining."</p>
+            <div style="font-size: 0.7rem; color: var(--accent-gold); margin-top: 30px; letter-spacing: 2px;">CLICK TO OPEN & FLIP</div>
+          </div>
+        </div>
+
+        <!-- Page 2 (Inside Left - The Heritage) -->
+        <div class="page page-inside-left" style="background: #faf8f5; color: #2d3748; padding: 40px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #e2e8f0; border-right: none;">
+          <div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 8px;">Our Heritage</h3>
+            <p style="font-size: 0.82rem; line-height: 1.6; color: #4a5568; text-align: justify; margin-bottom: 15px;">Since our early beginnings, we have been synonymous with pure traditional preparations, outstanding quality parameters, and unmatched culinary dedication.</p>
+            <p style="font-size: 0.82rem; line-height: 1.6; color: #4a5568; text-align: justify;">Every single piece of our sweets is crafted using 100% pure organic milk, hand-selected dry fruits, saffron, and natural cardamoms by master confectioners.</p>
+          </div>
+          <div style="font-size: 0.7rem; color: #a0aec0; text-align: center;">Page 1 of 4</div>
+        </div>
+
+        <!-- Page 3 (Inside Right - Specialties) -->
+        <div class="page page-inside-right" style="background: #faf8f5; color: #2d3748; padding: 40px 30px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #e2e8f0; border-left: none;">
+          <div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 8px;">Chef Specialties</h3>
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+              <li style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #1a202c;">Kaju Katli (Pure Ghee)</span>
+                <span style="flex-grow: 1; border-bottom: 1px dotted #cbd5e0;"></span>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">₹380</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #1a202c;">Golden Kesari Peda</span>
+                <span style="flex-grow: 1; border-bottom: 1px dotted #cbd5e0;"></span>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">₹320</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #1a202c;">Paneer Tikka Platter</span>
+                <span style="flex-grow: 1; border-bottom: 1px dotted #cbd5e0;"></span>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">₹240</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #1a202c;">Signature Shahi Kheer</span>
+                <span style="flex-grow: 1; border-bottom: 1px dotted #cbd5e0;"></span>
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--primary);">₹160</span>
+              </li>
+            </ul>
+          </div>
+          <div style="font-size: 0.7rem; color: #a0aec0; text-align: center;">Page 2 of 4</div>
+        </div>
+
+        <!-- Page 4 (Back Cover) -->
+        <div class="page cover-back" style="background: linear-gradient(135deg, #1c2025, #0f1215); border: 2px solid var(--accent-gold); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; text-align: center;">
+          <div style="border: 1px solid var(--accent-gold); padding: 30px; border-radius: 12px; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--accent-gold); letter-spacing: 2px; margin-bottom: 15px;">Bookings</h3>
+            <p style="font-size: 0.8rem; color: #a0aec0; line-height: 1.6; margin-bottom: 8px;"><i class="fa-solid fa-phone" style="color: var(--accent-gold); margin-right: 6px;"></i> <a href="tel:+919760292999" style="color: inherit; text-decoration: none;">+91 97602 92999</a></p>
+            <div class="contact-text">
+              <p style="font-size: 0.8rem; color: #a0aec0; line-height: 1.6; margin-bottom: 20px;"><i class="fa-solid fa-map-marker-alt" style="color: var(--accent-gold); margin-right: 6px;"></i> Hasanpur Chungi, Saharanpur</p>
+            </div>
+            <div style="width: 25px; height: 1px; background: var(--accent-gold); margin-bottom: 20px;"></div>
+            <p style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;" id="brochure-brand-name">Anamika Saffron Lounge</p>
+          </div>
+        </div>
+      </div>
+      <div class="brochure-instruction" style="text-align: center; color: white; margin-top: 25px; font-size: 0.85rem; font-family: 'Outfit', sans-serif;">
+        <i class="fa-solid fa-angles-left"></i> Tap any page to flip open or close the booklet <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </div>
+  </div>
+  <!-- Premium Centralized Configuration and Data -->
+  <script src="data.js" defer></script>
+  <!-- Premium Interactive Logic Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

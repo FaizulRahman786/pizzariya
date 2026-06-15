@@ -1,0 +1,385 @@
+/* 
+   ANAMIKA SWEETS - Premium Notification Center Stylesheet (notifications.css)
+   Custom styles for the responsive Notification Bell, Dropdown Panel, and Drawer.
+*/
+
+/* Bell Wiggle Animation for New Notifications */
+@keyframes bellWiggle {
+  0% { transform: rotate(0); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-15deg); }
+  45% { transform: rotate(10deg); }
+  60% { transform: rotate(-10deg); }
+  75% { transform: rotate(4deg); }
+  85% { transform: rotate(-4deg); }
+  100% { transform: rotate(0); }
+}
+
+.bell-animate {
+  animation: bellWiggle 0.8s ease;
+}
+
+/* Badge Highlight Pop Animation */
+@keyframes badgePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.badge-pop {
+  animation: badgePop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Notifications Container (Dropdown & Drawer Backdrop) */
+.notif-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.notif-wrapper.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Backdrop Overlay for Mobile Drawer (and click-away detection) */
+.notif-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Panel Structure (Unified Responsive Design) */
+.notif-panel {
+  position: absolute;
+  background: var(--bg-surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Header inside Panel */
+.notif-header {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.notif-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notif-actions-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notif-action-btn-link {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.notif-action-btn-link:hover {
+  background: var(--primary-soft);
+}
+
+.notif-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.notif-close-btn:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* List container */
+.notif-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.notif-list::-webkit-scrollbar {
+  width: 5px;
+}
+.notif-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.notif-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+/* Notification Item Row */
+.notif-item {
+  padding: 16px 20px;
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.notif-item:hover {
+  background: rgba(249, 115, 22, 0.03);
+}
+
+.notif-item.unread {
+  background: rgba(249, 115, 22, 0.05);
+}
+
+.notif-item.unread::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary);
+}
+
+.notif-item-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.notif-item.unread .notif-item-icon-wrapper {
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-color: rgba(249, 115, 22, 0.2);
+}
+
+.notif-item-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notif-item-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.notif-item-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.notif-item.unread .notif-item-title {
+  color: var(--primary-dark);
+}
+
+.notif-item-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.notif-item-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.notif-item-delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.notif-item-delete-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.notif-item:hover .notif-item-delete-btn {
+  opacity: 1;
+}
+
+/* Empty notifications State */
+.notif-empty-state {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 12px;
+}
+
+.notif-empty-state i {
+  font-size: 2.8rem;
+  color: var(--primary-soft);
+  animation: bellWiggle 2s infinite ease-in-out;
+}
+
+.notif-empty-state p {
+  font-size: 0.9rem;
+  max-width: 250px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Loading State styles */
+.notif-loading-state {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+/* Footer panel controls */
+.notif-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  justify-content: center;
+}
+
+.notif-footer-btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* ========================================================
+   Desktop and Mobile Responsive Layout Styling Rules
+   ======================================================== */
+
+/* Desktop Specific Rules */
+@media (min-width: 769px) {
+  .notif-overlay {
+    background: transparent; /* Click away transparent barrier */
+  }
+  
+  .notif-panel {
+    top: 80px;
+    right: 5%;
+    width: 390px;
+    border-radius: 16px;
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  
+  .notif-wrapper.active .notif-panel {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .notif-close-btn {
+    display: none; /* Desktop uses click-away mostly */
+  }
+  
+  /* Always show scroll bar on desktop list */
+  .notif-list {
+    max-height: 420px;
+  }
+}
+
+/* Mobile Specific Bottom Drawer Rules */
+@media (max-width: 768px) {
+  .notif-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    max-height: 80vh;
+    transform: translateY(100%);
+  }
+  
+  .notif-wrapper.active .notif-panel {
+    transform: translateY(0);
+  }
+  
+  .notif-list {
+    max-height: calc(80vh - 120px);
+  }
+  
+  .notif-close-btn {
+    display: flex;
+  }
+  
+  .notif-item-delete-btn {
+    opacity: 0.7; /* Always partially visible on mobile since no hover state */
+  }
+}

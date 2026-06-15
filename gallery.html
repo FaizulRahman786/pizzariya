@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('anamika-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visual Gallery of ANAMIKA SWEETS & Saffron Lounge - Fine dining ambiance, premium sweets, tandoor kitchen, and celebratory banquets in Saharanpur.">
+  <meta name="theme-color" content="#f97316">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Anamika Sweets">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Gallery — ANAMIKA SWEETS">
+  <meta property="og:description" content="Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
+  <meta property="og:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <meta property="og:url" content="https://anamisweat.vercel.app/gallery.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gallery — ANAMIKA SWEETS">
+  <meta name="twitter:description" content="Saharanpur's finest premium sweets, bakery & restaurant.">
+  <meta name="twitter:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <link rel="canonical" href="https://anamisweat.vercel.app/gallery.html">
+
+  <title>Gallery — ANAMIKA SWEETS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+  <!-- Font Awesome for sleek modern vector icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+
+  <!-- Shared utilities, central config, layout loader, translations, and schema generators -->
+  <script src="utils.js" defer></script>
+  <script src="config.js" defer></script>
+  <script src="layout.js?v=9" defer></script>
+  <script src="translations.js?v=9" defer></script>
+  <script src="schema.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Reusable component mount points -->
+  <div id="preloader-mount">
+    <div id="luxury-preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-container">
+          <div class="logo-halo-ring logo-halo-1"></div>
+          <div class="logo-halo-ring logo-halo-2"></div>
+          <div class="logo-outer-ring"></div>
+          <div class="logo-vector-badge">
+            <svg class="luxury-monogram-svg" viewBox="0 0 100 100">
+              <circle class="monogram-border-outer" cx="50" cy="50" r="44" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="1.5" />
+              <circle class="monogram-border-inner" cx="50" cy="50" r="41" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="0.75" opacity="0.5" />
+              <path class="monogram-star star-n" d="M50 12 L51.5 15 L50 18 L48.5 15 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-s" d="M50 82 L51.5 85 L50 88 L48.5 85 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-w" d="M12 50 L15 51.5 L18 50 L15 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-e" d="M82 50 L85 51.5 L88 50 L85 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <text class="monogram-letter" x="50" y="62" font-family="'Playfair Display', serif" font-size="34" font-weight="700" text-anchor="middle" fill="url(#gold-gradient-monogram)">A</text>
+              <defs>
+                <linearGradient id="gold-gradient-monogram" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b38728" />
+                  <stop offset="30%" stop-color="#fbf5b7" />
+                  <stop offset="50%" stop-color="#da1b60" />
+                  <stop offset="70%" stop-color="#fbf5b7" />
+                  <stop offset="100%" stop-color="#aa771c" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-text" id="preloader-brand-name">ANAMIKA SWEETS</div>
+        <div class="preloader-sub" id="preloader-tagline">SAFFRON LOUNGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar Mount -->
+  <div id="navbar-mount"></div>
+
+  <main id="main-content">
+
+  <!-- Banner Spacer -->
+  <div style="height: 80px;"></div>
+
+  <!-- Gallery Header Hero -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="aurora-container">
+      <div class="aurora-blob aurora-blob-1"></div>
+      <div class="aurora-blob aurora-blob-2"></div>
+    </div>
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background-image: linear-gradient(to bottom, rgba(10,10,12,0.6), rgba(10,10,12,0.9)), url('images/gallery_interior.png'); background-position: center; background-size: cover;"></div>
+    </div>
+    
+    <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto; z-index: 5;">
+      <span class="hero-badge" style="letter-spacing: 2px; text-transform: uppercase;"><i class="fa-solid fa-images"></i> Visual Journey</span>
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 3.2rem; color: #fff; margin-top: 15px; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">Our Restaurant Gallery</h1>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; font-family: 'Outfit', sans-serif; margin-top: 10px;">A sensory visual tour through our premium dining spaces, culinary kitchen, and exquisite recipes.</p>
+    </div>
+  </section>
+
+  <!-- Main Gallery Section -->
+  <section class="gallery-section">
+    <div class="gallery-container">
+      
+      <!-- Category Filters -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="ambiance">Ambiance</button>
+        <button class="filter-btn" data-filter="culinary">Culinary & Dishes</button>
+        <button class="filter-btn" data-filter="sweets">Sweets & Bakery</button>
+        <button class="filter-btn" data-filter="celebrations">Celebrations</button>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        
+        <!-- Ambiance Interior -->
+        <div class="gallery-item" data-category="ambiance" data-id="gal-1">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery_interior.png" alt="Saffron Lounge Dining Hall" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Ambiance</span>
+            <h3 class="gallery-title">Saffron Lounge Dining Hall</h3>
+            <p class="gallery-desc">Luxury fine dining hall adorned with warm lighting and plush velvet seating.</p>
+          </div>
+        </div>
+
+        <!-- Ambiance Entrance -->
+        <div class="gallery-item" data-category="ambiance" data-id="gal-2">
+          <div class="gallery-image-wrapper">
+            <img src="images/hero_slider_1.png" alt="Grand Entrance Facade" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Ambiance</span>
+            <h3 class="gallery-title">Traditional Arch Entrance</h3>
+            <p class="gallery-desc">A royal welcoming corridor showcasing traditional Indian architecture.</p>
+          </div>
+        </div>
+
+        <!-- Culinary Kitchen -->
+        <div class="gallery-item" data-category="culinary" data-id="gal-3">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery_kitchen.png" alt="Tandoor Hot Kitchen Operations" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Culinary</span>
+            <h3 class="gallery-title">Tandoor Hot Operations</h3>
+            <p class="gallery-desc">Our skilled chefs preparing flame-baked naan and roasted kebabs.</p>
+          </div>
+        </div>
+
+        <!-- Culinary Biryani -->
+        <div class="gallery-item" data-category="culinary" data-id="gal-4">
+          <div class="gallery-image-wrapper">
+            <img src="images/dish_biryani.png" alt="Royal Hyderabadi Biryani" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Culinary</span>
+            <h3 class="gallery-title">Hyderabadi Dum Biryani</h3>
+            <p class="gallery-desc">Layered aromatic basmati rice cooked on slow dum heat with saffron threads.</p>
+          </div>
+        </div>
+
+        <!-- Culinary Tikka -->
+        <div class="gallery-item" data-category="culinary" data-id="gal-5">
+          <div class="gallery-image-wrapper">
+            <img src="images/dish_paneer_tikka.png" alt="Sizzling Charcoal Paneer Tikka" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Culinary</span>
+            <h3 class="gallery-title">Sizzling Paneer Tikka</h3>
+            <p class="gallery-desc">Fresh cottage cheese chunks marinated in spiced yogurt and chargrilled.</p>
+          </div>
+        </div>
+
+        <!-- Sweets Counter -->
+        <div class="gallery-item" data-category="sweets" data-id="gal-6">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery_sweets.png" alt="Premium Sweet Display Counter" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Sweets & Bakery</span>
+            <h3 class="gallery-title">Sweets Display Counter</h3>
+            <p class="gallery-desc">A colorful array of premium handmade sweets under golden lighting.</p>
+          </div>
+        </div>
+
+        <!-- Sweets Kaju Katli -->
+        <div class="gallery-item" data-category="sweets" data-id="gal-7">
+          <div class="gallery-image-wrapper">
+            <img src="images/dish_kaju_katli.png" alt="Silver Ornamented Kaju Katli" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Sweets & Bakery</span>
+            <h3 class="gallery-title">Silver Kaju Katli</h3>
+            <p class="gallery-desc">Melt-in-the-mouth cashew fudge diamond sweets garnished with silver vark.</p>
+          </div>
+        </div>
+
+        <!-- Sweets Cake -->
+        <div class="gallery-item" data-category="sweets" data-id="gal-8">
+          <div class="gallery-image-wrapper">
+            <img src="images/dish_chocolate_cake.png" alt="Decadent Chocolate Fudge Cake" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Sweets & Bakery</span>
+            <h3 class="gallery-title">Chocolate Fudge Cake</h3>
+            <p class="gallery-desc">Decadent triple-layered chocolate cake decorated with smooth dark ganache.</p>
+          </div>
+        </div>
+
+        <!-- Sweets Croissant -->
+        <div class="gallery-item" data-category="sweets" data-id="gal-9">
+          <div class="gallery-image-wrapper">
+            <img src="images/dish_croissant.png" alt="Fresh Butter Croissants" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Sweets & Bakery</span>
+            <h3 class="gallery-title">Golden Butter Croissants</h3>
+            <p class="gallery-desc">Flaky, golden-baked French pastries prepared fresh daily by our bakers.</p>
+          </div>
+        </div>
+
+        <!-- Celebrations Birthday -->
+        <div class="gallery-item" data-category="celebrations" data-id="gal-10">
+          <div class="gallery-image-wrapper">
+            <img src="images/package_birthday.png" alt="Saffron Lounge Birthday Banquet" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Celebrations</span>
+            <h3 class="gallery-title">Birthday Celebration Hall</h3>
+            <p class="gallery-desc">A beautifully decorated themed banquet space ready for milestone celebrations.</p>
+          </div>
+        </div>
+
+        <!-- Celebrations Couple -->
+        <div class="gallery-item" data-category="celebrations" data-id="gal-11">
+          <div class="gallery-image-wrapper">
+            <img src="images/package_couple.png" alt="Candlelight Private Couple Dinner" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Celebrations</span>
+            <h3 class="gallery-title">Candlelight Dinner Setup</h3>
+            <p class="gallery-desc">Intimate romantic table setting adorned with fresh rose petals and soft candle glow.</p>
+          </div>
+        </div>
+
+        <!-- Celebrations Family -->
+        <div class="gallery-item" data-category="celebrations" data-id="gal-12">
+          <div class="gallery-image-wrapper">
+            <img src="images/package_family.png" alt="Grand Family Feast Gathering" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Celebrations</span>
+            <h3 class="gallery-title">Grand Family Banquet</h3>
+            <p class="gallery-desc">Spacious seating configurations for multi-generational celebratory feasts.</p>
+          </div>
+        </div>
+
+        <!-- Celebrations Kitty -->
+        <div class="gallery-item" data-category="celebrations" data-id="gal-13">
+          <div class="gallery-image-wrapper">
+            <img src="images/package_kitty.png" alt="Royal Kitty Party Arrangement" loading="lazy" decoding="async" width="1024" height="1024">
+          </div>
+          <button class="gallery-like-btn" aria-label="Like this photo"><i class="fa-solid fa-heart"></i></button>
+          <button class="gallery-expand-icon" aria-label="Expand image"><i class="fa-solid fa-expand"></i></button>
+          <div class="gallery-overlay">
+            <span class="gallery-badge">Celebrations</span>
+            <h3 class="gallery-title">Royal Kitty Party</h3>
+            <p class="gallery-desc">Vibrant custom themes designed for standard social high-tea parties.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lightbox-counter" id="lightbox-counter-badge">1 / 13</div>
+    
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev-btn" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightbox-main-img">
+      <div class="lightbox-caption" id="lightbox-caption-text">Saffron Lounge Dining Hall</div>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next-btn" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- Toast alerts container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  </main>
+
+  <!-- Reusable layout mount points -->
+  <div id="box-builder-mount"></div>
+  <div id="whatsapp-widget-mount"></div>
+  <div id="mobile-actions-mount"></div>
+  <div id="footer-mount"></div>
+
+  <!-- Premium Centralized Configuration and Data -->
+  <script src="data.js" defer></script>
+  <!-- Premium Interactive Logic Script -->
+  <script src="script.js" defer></script>
+
+  <!-- Dedicated Gallery Filtration & Lightbox Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Dynamic Category Filtration
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filterValue = btn.getAttribute("data-filter");
+
+          galleryItems.forEach(item => {
+            const category = item.getAttribute("data-category");
+            if (filterValue === "all" || category === filterValue) {
+              item.style.display = "block";
+              // Triggers dynamic refade
+              setTimeout(() => {
+                item.style.opacity = "1";
+                item.style.transform = "scale(1)";
+              }, 50);
+            } else {
+              item.style.opacity = "0";
+              item.style.transform = "scale(0.9)";
+              setTimeout(() => {
+                item.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // 2. Fullscreen Lightbox logic
+      const lightbox = document.getElementById("gallery-lightbox");
+      const lightboxImg = document.getElementById("lightbox-main-img");
+      const lightboxCaption = document.getElementById("lightbox-caption-text");
+      const lightboxCounter = document.getElementById("lightbox-counter-badge");
+      const closeBtn = document.getElementById("lightbox-close-btn");
+      const prevBtn = document.getElementById("lightbox-prev-btn");
+      const nextBtn = document.getElementById("lightbox-next-btn");
+
+      let currentImages = [];
+      let currentIndex = 0;
+
+      // Update the list of currently visible gallery items
+      function updateCurrentImagesList() {
+        currentImages = Array.from(galleryItems).filter(item => item.style.display !== "none");
+      }
+
+      function openLightbox(index) {
+        updateCurrentImagesList();
+        currentIndex = index;
+        const targetItem = currentImages[currentIndex];
+        if (!targetItem) return;
+
+        const imgEl = targetItem.querySelector("img");
+        const titleEl = targetItem.querySelector(".gallery-title");
+        const badgeEl = targetItem.querySelector(".gallery-badge");
+
+        lightboxImg.src = imgEl.src;
+        lightboxImg.alt = imgEl.alt;
+        lightboxCaption.innerHTML = `<strong>${titleEl.textContent}</strong> — ${badgeEl.textContent}`;
+        lightboxCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden"; // Prevents background body scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      function showNext() {
+        if (currentImages.length <= 1) return;
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        openLightbox(currentIndex);
+      }
+
+      function showPrev() {
+        if (currentImages.length <= 1) return;
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        openLightbox(currentIndex);
+      }
+
+      // Add click listeners to items
+      galleryItems.forEach((item, index) => {
+        // Expand icon triggers lightbox
+        const expandBtn = item.querySelector(".gallery-expand-icon");
+        const overlay = item.querySelector(".gallery-overlay");
+
+        const triggerOpen = () => {
+          updateCurrentImagesList();
+          const visibleIndex = currentImages.indexOf(item);
+          if (visibleIndex !== -1) {
+            openLightbox(visibleIndex);
+          }
+        };
+
+        if (expandBtn) {
+          expandBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            triggerOpen();
+          });
+        }
+
+        item.addEventListener("click", (e) => {
+          // On mobile view (width <= 768px), first click toggles text overlay visibility
+          if (window.innerWidth <= 768) {
+            if (!item.classList.contains("active-overlay")) {
+              e.preventDefault();
+              e.stopPropagation();
+              // Remove active overlay from all items first
+              galleryItems.forEach(el => el.classList.remove("active-overlay"));
+              // Add active overlay to clicked item
+              item.classList.add("active-overlay");
+              return;
+            }
+          }
+          // Default or second click: open lightbox
+          triggerOpen();
+        });
+      });
+
+      // Clear active overlays when clicking anywhere outside a gallery item
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".gallery-item")) {
+          galleryItems.forEach(el => el.classList.remove("active-overlay"));
+        }
+      });
+
+      // Navigation listeners
+      closeBtn.addEventListener("click", closeLightbox);
+      nextBtn.addEventListener("click", showNext);
+      prevBtn.addEventListener("click", showPrev);
+
+      // Close on clicking backdrop
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox || e.target === lightbox.querySelector('.lightbox-content')) {
+          closeLightbox();
+        }
+      });
+
+      // Key controls
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+      });
+
+      // 3. Gallery Like / Favorite System
+      const galleryLikes = JSON.parse(localStorage.getItem('anamika-gallery-likes')) || {};
+
+      function saveGalleryLikes() {
+        localStorage.setItem('anamika-gallery-likes', JSON.stringify(galleryLikes));
+      }
+
+      // Restore liked state from storage on page load
+      document.querySelectorAll('.gallery-like-btn').forEach(btn => {
+        const item = btn.closest('.gallery-item');
+        const id = item.getAttribute('data-id');
+        if (galleryLikes[id]) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Handle like button clicks
+      document.querySelectorAll('.gallery-like-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation(); // Prevent opening lightbox
+          e.preventDefault();
+
+          const item = btn.closest('.gallery-item');
+          const id = item.getAttribute('data-id');
+          const title = item.querySelector('.gallery-title').textContent;
+
+          galleryLikes[id] = !galleryLikes[id];
+          btn.classList.toggle('active');
+
+          // Re-trigger the pop animation
+          if (galleryLikes[id]) {
+            btn.style.animation = 'none';
+            btn.offsetHeight; // force reflow
+            btn.style.animation = '';
+          }
+
+          saveGalleryLikes();
+
+          // Update global likes badge (combines menu + gallery likes)
+          if (typeof updateLikesBadge === 'function') {
+            updateLikesBadge();
+          }
+
+          // Show toast feedback
+          if (typeof showToast === 'function') {
+            if (galleryLikes[id]) {
+              showToast(`Liked "${title}" photo!`, 'success');
+            } else {
+              showToast(`Removed "${title}" from favorites.`, 'info');
+            }
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

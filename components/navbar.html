@@ -1,0 +1,81 @@
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="logo" id="nav-logo-link">
+    <img src="images/logo.png" alt="Anamika Sweets — Saffron Lounge" class="logo-img" id="nav-logo-img" decoding="async" width="1024" height="1024">
+    <span id="nav-brand-name">BUSINESS NAME</span>
+  </a>
+  
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="nav-link-home" data-translate="home">Home</a></li>
+    <li><a href="about.html" class="nav-link-about" data-translate="about">About Us</a></li>
+    <li><a href="menu.html" class="nav-link-menu" data-translate="menu">Our Menu</a></li>
+    <li><a href="packages.html" class="nav-link-packages" data-translate="packages">Party Packages</a></li>
+    <li><a href="testimonials.html" class="nav-link-testimonials" data-translate="testimonials">Testimonials</a></li>
+    <li><a href="gallery.html" class="nav-link-gallery" data-translate="gallery">Gallery</a></li>
+    <li class="desktop-hidden"><a href="likes.html" class="nav-link-likes" data-translate="likes">Liked Items</a></li>
+    <li class="desktop-hidden"><a href="profile.html" class="nav-link-profile" data-translate="profile">My Account</a></li>
+    <li class="mobile-only-action"><a href="reserve.html" class="btn-primary" style="margin: 20px 0 0; justify-content: center; width: 100%; display: inline-flex;" data-translate="reserve"><i class="fa-solid fa-calendar-check"></i> Reserve Table</a></li>
+    <li class="mobile-drawer-only-actions">
+      <button class="mobile-drawer-box-btn" style="width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--accent-gold); cursor: pointer; color: var(--accent-gold); font-size: 1.15rem; transition: var(--transition);" title="Gourmet Box Builder">
+        <i class="fa-solid fa-gift"></i>
+      </button>
+      <button class="mobile-drawer-theme-btn" style="width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-color); cursor: pointer; color: var(--text-main); font-size: 1.15rem; transition: var(--transition);" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="mobile-drawer-effects-btn" id="mobile-effects-toggle-btn" style="width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--bg-surface); border: 1px solid var(--border-color); cursor: pointer; color: var(--text-main); font-size: 1.15rem; transition: var(--transition);" title="Toggle Interactive Effects">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
+    </li>
+  </ul>
+  
+  <div class="nav-actions">
+    <!-- Likes indicator -->
+    <a href="likes.html" class="btn-icon" id="header-likes-btn" title="View Liked Items">
+      <i class="fa-solid fa-heart"></i>
+      <span id="likes-count" style="position:absolute; top:-2px; right:-2px; background:red; color:white; border-radius:50%; font-size:0.7rem; width:16px; height:16px; display:none; align-items:center; justify-content:center;">0</span>
+    </a>
+
+    <!-- Notifications indicator -->
+    <button class="btn-icon" id="header-notifications-btn" title="Notifications" style="position: relative; background: none; border: 1px solid var(--border-color); color: var(--text-main); cursor: pointer; transition: var(--transition);">
+      <i class="fa-solid fa-bell"></i>
+      <span id="notifications-count" style="position:absolute; top:-2px; right:-2px; background:var(--primary); color:white; border-radius:50%; font-size:0.7rem; width:16px; height:16px; display:none; align-items:center; justify-content:center; z-index: 10;">0</span>
+    </button>
+
+    <!-- Profile indicator -->
+    <a href="profile.html" class="btn-icon" id="header-profile-btn" title="My Account">
+      <i class="fa-solid fa-user"></i>
+    </a>
+
+    <!-- Cart indicator -->
+    <a href="cart.html" class="btn-icon" id="header-cart-btn" title="View Cart">
+      <i class="fa-solid fa-shopping-cart"></i>
+      <span id="cart-count" style="position:absolute; top:-2px; right:-2px; background:var(--primary); color:white; border-radius:50%; font-size:0.7rem; width:16px; height:16px; display:none; align-items:center; justify-content:center;">0</span>
+    </a>
+
+    <!-- Gourmet Box Builder -->
+    <button class="btn-icon" id="header-box-builder-btn" title="Gourmet Box Builder" style="border-color: var(--accent-gold); color: var(--accent-gold);">
+      <i class="fa-solid fa-gift"></i>
+    </button>
+
+    <div class="nav-divider"></div>
+
+    <!-- Interactive Effects Switcher -->
+    <button class="effects-toggle" id="effects-btn" aria-label="Toggle Interactive Effects" title="Toggle Interactive Effects">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </button>
+
+    <!-- Dark Mode Switcher -->
+    <button class="theme-toggle" id="theme-btn" aria-label="Toggle Dark Mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="nav-divider"></div>
+    
+    <a href="reserve.html" class="btn-primary" data-translate="reserve">
+      <i class="fa-solid fa-calendar-check"></i> Reserve Table
+    </a>
+  </div>
+  
+  <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>

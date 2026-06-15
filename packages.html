@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('anamika-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Host Celebrations at ANAMIKA SWEETS - Saharanpur's ultimate destination for kitty parties, birthday bashes, and candlelight dates.">
+  <meta name="theme-color" content="#f97316">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Anamika Sweets">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Party Packages — ANAMIKA SWEETS">
+  <meta property="og:description" content="Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
+  <meta property="og:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <meta property="og:url" content="https://anamisweat.vercel.app/packages.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Party Packages — ANAMIKA SWEETS">
+  <meta name="twitter:description" content="Saharanpur's finest premium sweets, bakery & restaurant.">
+  <meta name="twitter:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+  <link rel="canonical" href="https://anamisweat.vercel.app/packages.html">
+
+  <title>Party Packages — ANAMIKA SWEETS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+
+  <!-- Font Awesome for sleek modern vector icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="css/style.css?v=9">
+
+  <!-- Shared utilities, central config, layout loader, translations, and schema generators -->
+  <script src="utils.js" defer></script>
+  <script src="config.js" defer></script>
+  <script src="layout.js?v=9" defer></script>
+  <script src="translations.js?v=9" defer></script>
+  <script src="schema.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Reusable component mount points -->
+  <div id="preloader-mount">
+    <div id="luxury-preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo-container">
+          <div class="logo-halo-ring logo-halo-1"></div>
+          <div class="logo-halo-ring logo-halo-2"></div>
+          <div class="logo-outer-ring"></div>
+          <div class="logo-vector-badge">
+            <svg class="luxury-monogram-svg" viewBox="0 0 100 100">
+              <circle class="monogram-border-outer" cx="50" cy="50" r="44" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="1.5" />
+              <circle class="monogram-border-inner" cx="50" cy="50" r="41" fill="none" stroke="url(#gold-gradient-monogram)" stroke-width="0.75" opacity="0.5" />
+              <path class="monogram-star star-n" d="M50 12 L51.5 15 L50 18 L48.5 15 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-s" d="M50 82 L51.5 85 L50 88 L48.5 85 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-w" d="M12 50 L15 51.5 L18 50 L15 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <path class="monogram-star star-e" d="M82 50 L85 51.5 L88 50 L85 48.5 Z" fill="url(#gold-gradient-monogram)" />
+              <text class="monogram-letter" x="50" y="62" font-family="'Playfair Display', serif" font-size="34" font-weight="700" text-anchor="middle" fill="url(#gold-gradient-monogram)">A</text>
+              <defs>
+                <linearGradient id="gold-gradient-monogram" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#b38728" />
+                  <stop offset="30%" stop-color="#fbf5b7" />
+                  <stop offset="50%" stop-color="#da1b60" />
+                  <stop offset="70%" stop-color="#fbf5b7" />
+                  <stop offset="100%" stop-color="#aa771c" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="preloader-text" id="preloader-brand-name">ANAMIKA SWEETS</div>
+        <div class="preloader-sub" id="preloader-tagline">SAFFRON LOUNGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar Mount -->
+  <div id="navbar-mount"></div>
+
+  <main id="main-content">
+
+  <!-- Banner Spacer -->
+  <div style="height: 80px;"></div>
+
+  <!-- Packages Hero Banner -->
+  <section class="hero" id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="aurora-container">
+      <div class="aurora-blob aurora-blob-1"></div>
+      <div class="aurora-blob aurora-blob-2"></div>
+    </div>
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('images/hero_slider_3.png');"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-tagline">Celebrate in Elegance</span>
+      <h1 style="font-size: 3rem;">Premium Party Packages</h1>
+      <p>Enjoy curated culinary experiences, thematic balloon decorations, and dedicated service staff.</p>
+    </div>
+  </section>
+
+  <!-- Party Packages Section -->
+  <section class="packages-section" id="packages">
+    <div class="section-header">
+      <span>Unforgettable Milestones</span>
+      <h2>Our Event Configuration Packages</h2>
+      <p>Perfect configurations for all your milestones. We host your memories with unparalleled elegance.</p>
+    </div>
+    
+    <div class="packages-grid">
+      <!-- Kitty Party -->
+      <div class="package-card">
+        <span class="package-price-badge">₹599 / Person</span>
+        <div class="package-img">
+          <img src="images/package_kitty.png" alt="Kitty Party" loading="lazy" decoding="async" width="1024" height="1024">
+        </div>
+        <div class="package-content">
+          <span class="package-caption">Ladies Special</span>
+          <h3>Kitty Party Package</h3>
+          <p>An elegant set menu combining light savory items, fine drinks, and custom desserts for ladies groups.</p>
+          <ul class="package-details">
+            <li><i class="fa-solid fa-circle-check"></i> Elegant Table Seating Layout</li>
+            <li><i class="fa-solid fa-circle-check"></i> 2 Starters + 2 Main Courses + Desserts</li>
+            <li><i class="fa-solid fa-circle-check"></i> Welcome Drinks on Arrival</li>
+          </ul>
+          <a href="reserve.html?package=kitty" class="btn-primary" style="width:100%; justify-content:center;">Book Package</a>
+        </div>
+      </div>
+
+      <!-- Birthday Bash -->
+      <div class="package-card">
+        <span class="package-price-badge">₹899 / Person</span>
+        <div class="package-img">
+          <img src="images/package_birthday.png" alt="Birthday Celebration" loading="lazy" decoding="async" width="1024" height="1024">
+        </div>
+        <div class="package-content">
+          <span class="package-caption">Perfect Milestones</span>
+          <h3>Birthday Celebration</h3>
+          <p>Create memories with thematic decoration, sound support, comprehensive buffet services, and custom cakes.</p>
+          <ul class="package-details">
+            <li><i class="fa-solid fa-circle-check"></i> Custom Birthday Cake & Decoration</li>
+            <li><i class="fa-solid fa-circle-check"></i> 3 Starters + 3 Main Courses + Desserts</li>
+            <li><i class="fa-solid fa-circle-check"></i> Dedicated Service Host</li>
+          </ul>
+          <a href="reserve.html?package=birthday" class="btn-primary" style="width:100%; justify-content:center;">Book Package</a>
+        </div>
+      </div>
+
+      <!-- Romantic Couple Date -->
+      <div class="package-card">
+        <span class="package-price-badge">₹1,299 / Couple</span>
+        <div class="package-img">
+          <img src="images/package_couple.png" alt="Romantic Couple Dinner" loading="lazy" decoding="async" width="1024" height="1024">
+        </div>
+        <div class="package-content">
+          <span class="package-caption">Special Moments</span>
+          <h3>Romantic Couple Date</h3>
+          <p>A quiet, private glassmorphic setup under soft candlelights with premium food pairings and customized setups.</p>
+          <ul class="package-details">
+            <li><i class="fa-solid fa-circle-check"></i> Private Candlelight Setting</li>
+            <li><i class="fa-solid fa-circle-check"></i> 4-Course Fine Culinary Tasting Menu</li>
+            <li><i class="fa-solid fa-circle-check"></i> Special Personalized Dessert Chef-Creation</li>
+          </ul>
+          <a href="reserve.html?package=couple" class="btn-primary" style="width:100%; justify-content:center;">Book Package</a>
+        </div>
+      </div>
+
+      <!-- Royal Family Lounge -->
+      <div class="package-card">
+        <span class="package-price-badge">₹799 / Person</span>
+        <div class="package-img">
+          <img src="images/package_family.png" alt="Royal Family Lounge" loading="lazy" decoding="async" width="1024" height="1024">
+        </div>
+        <div class="package-content">
+          <span class="package-caption">Grand Gatherings</span>
+          <h3>Royal Family Lounge</h3>
+          <p>A magnificent, spacious banquet setting with personalized multi-cuisine buffet and dedicated hosts.</p>
+          <ul class="package-details">
+            <li><i class="fa-solid fa-circle-check"></i> Spacious Royal Seating Lounge</li>
+            <li><i class="fa-solid fa-circle-check"></i> Multi-Cuisine Royal Buffet Dining</li>
+            <li><i class="fa-solid fa-circle-check"></i> Kids Play Zone Complimentary Access</li>
+          </ul>
+          <a href="reserve.html?package=family" class="btn-primary" style="width:100%; justify-content:center;">Book Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast alerts container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Interactive Modal for Success Message -->
+  <div class="modal" id="success-modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>Order Confirmed!</h3>
+        <p class="modal-subtitle">Your details have been processed, downloaded as a receipt, and forwarded via email.</p>
+        <pre id="modal-msg"></pre>
+        <button class="btn-modal-close" id="modal-close-btn">
+          <i class="fa-solid fa-circle-check"></i> Complete and Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- Reusable layout mount points -->
+  <div id="box-builder-mount"></div>
+  <div id="whatsapp-widget-mount"></div>
+  <div id="mobile-actions-mount"></div>
+  <div id="footer-mount"></div>
+  <!-- Premium Centralized Configuration and Data -->
+  <script src="data.js" defer></script>
+  <!-- Premium Interactive Logic Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

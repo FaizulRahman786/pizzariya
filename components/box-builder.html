@@ -1,0 +1,63 @@
+<!-- Sidebar Drawer: Sweet Box Customizer -->
+<div class="drawer" id="box-customizer-drawer">
+  <div class="drawer-overlay" id="box-customizer-overlay"></div>
+  <div class="drawer-content" style="width: 480px; max-width: 95%;">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-gift" style="color: var(--primary);"></i> <span class="box-builder-title-label">Sweet Box Builder</span></h3>
+      <button class="drawer-close-btn" id="box-customizer-close" aria-label="Close Customizer"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-items" style="padding-top: 10px;">
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; text-align: center;" class="box-builder-desc-label">Choose a box capacity, pack your favorite premium sweets, and order a custom gourmet assortment!</p>
+      
+      <!-- Step 1: Select Box Size -->
+      <div style="margin-bottom: 20px;">
+        <h4 style="font-size: 0.95rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;" class="box-builder-step1-label">1. Choose Box Size</h4>
+        <div class="box-sizes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <button class="size-btn active" data-capacity="500">500g</button>
+          <button class="size-btn" data-capacity="1000">1kg</button>
+          <button class="size-btn" data-capacity="2000">2kg</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Choose Sweets to Add -->
+      <div style="margin-bottom: 25px;">
+        <h4 style="font-size: 0.95rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;" class="box-builder-step2-label">2. Pack Sweets</h4>
+        <div class="box-sweets-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <button class="add-sweet-opt" data-weight="100" data-type="cashew" data-name="Kaju Katli Special"><img src="images/dish_kaju_katli.png" style="width:24px; height:24px; border-radius:50%; object-fit:cover;" alt="Kaju Katli" loading="lazy" decoding="async" width="1024" height="1024"> Kaju Katli (+100g)</button>
+          <button class="add-sweet-opt" data-weight="100" data-type="milk" data-name="Shahi Kheer Thali"><img src="images/dish_shahi_kheer.png" style="width:24px; height:24px; border-radius:50%; object-fit:cover;" alt="Shahi Peda" loading="lazy" decoding="async" width="1024" height="1024"> Shahi Peda (+100g)</button>
+          <button class="add-sweet-opt" data-weight="150" data-type="savory" data-name="Premium Paneer Tikka"><img src="images/dish_paneer_tikka.png" style="width:24px; height:24px; border-radius:50%; object-fit:cover;" alt="Paneer Bite" loading="lazy" decoding="async" width="1024" height="1024"> Paneer Bite (+150g)</button>
+          <button class="add-sweet-opt" data-weight="125" data-type="bakery" data-name="Chocolate Truffle Cake"><img src="images/dish_chocolate_cake.png" style="width:24px; height:24px; border-radius:50%; object-fit:cover;" alt="Choco Praline" loading="lazy" decoding="async" width="1024" height="1024"> Choco Praline (+125g)</button>
+        </div>
+      </div>
+
+      <!-- Box Representation -->
+      <div class="virtual-box-container" style="background: var(--bg-main); border: 2px dashed var(--border-color); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 20px; position: relative;">
+        <div class="gold-box-emblem" style="border: 2px solid var(--accent-gold); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: var(--accent-gold); font-size: 1.8rem; animation: floatLogo 4s ease-in-out infinite;">
+          <i class="fa-solid fa-box-open"></i>
+        </div>
+        <h5 style="margin-bottom: 5px; font-weight: 700; color: var(--text-main);" class="box-builder-box-title">Your Custom Box</h5>
+        <div id="virtual-box-fill-bar" style="width: 100%; height: 8px; background: var(--border-color); border-radius: 4px; margin: 10px 0; overflow: hidden; position: relative;">
+          <div id="virtual-box-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent-gold)); transition: width 0.3s ease;"></div>
+        </div>
+        <span id="box-weight-status" style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">0g / 500g Packed</span>
+        <div id="custom-box-items-list" style="margin-top: 15px; font-size: 0.8rem; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; max-height: 80px; overflow-y: auto;">
+          <!-- Added sweets tags will show here -->
+        </div>
+      </div>
+
+      <!-- Scale Representation -->
+      <div class="box-scale-wrapper" style="display:flex; justify-content:space-between; align-items:center; background:var(--primary-soft); padding: 12px 20px; border-radius: 8px; margin-bottom: 25px;">
+        <span style="font-weight: 600; color: var(--primary-dark); font-size: 0.9rem;"><i class="fa-solid fa-scale-balanced"></i> <span class="box-builder-scale-label">Weight Scale:</span></span>
+        <strong id="box-scale-dial" style="font-size: 1.25rem; color: var(--primary); font-weight: 800;">0g</strong>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <button class="btn-primary" id="add-custom-box-to-cart-btn" style="width: 100%; justify-content: center; height: 50px;" disabled>
+        <i class="fa-solid fa-cart-plus"></i> <span class="box-builder-add-label">Add Custom Box to Cart</span>
+      </button>
+      <button class="btn-secondary" id="reset-custom-box-btn" style="width: 100%; justify-content: center; margin-top: 10px;">
+        <i class="fa-solid fa-trash-can"></i> <span class="box-builder-clear-label">Clear Box</span>
+      </button>
+    </div>
+  </div>
+</div>

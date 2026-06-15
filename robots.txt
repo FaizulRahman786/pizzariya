@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /components/
+Disallow: /css/
+Disallow: /mobile_screenshots/
+Disallow: /smoke_test_screenshots/
+
+Sitemap: https://anamisweat.vercel.app/sitemap.xml
