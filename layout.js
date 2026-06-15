@@ -1,5 +1,5 @@
 /*
-   ANAMIKA SWEETS - Shared Component Loader (layout.js)
+   Pizzariya Town - Shared Component Loader (layout.js)
    Loads shared HTML fragments safely without allowing a stalled request
    or repeated initialization to trap the page behind the preloader.
 */

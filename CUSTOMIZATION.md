@@ -1,4 +1,4 @@
-# Customization Guide — Anamika Sweets Template
+# Customization Guide — Pizzariya Town Template
 
 This template is structured to allow quick rebranding and setup. By customizing the central files, you can deploy a complete local business website in minutes.
 
@@ -9,11 +9,11 @@ This template is structured to allow quick rebranding and setup. By customizing 
 Open [config.js](file:///d:/c/template/10000/config.js) to configure the primary business parameters. The configuration object contains:
 
 ### Business Info
-*   `name`: Name of the brand (e.g. `ANAMIKA SWEETS`).
+*   `name`: Name of the brand (e.g. `Pizzariya Town`).
 *   `tagline`: Main subheader text.
 *   `logo`: Path to the logo image.
 *   `helpline`: Direct phone call number.
-*   `whatsapp`: Target phone number for WhatsApp chats (include country prefix without `+` or spaces for API compatibility, e.g., `+917858062571`).
+*   `whatsapp`: Target phone number for WhatsApp chats (include country prefix without `+` or spaces for API compatibility, e.g., `7858062571`).
 *   `email`: Support and contact inbox address.
 *   `googleMapsEmbed`: Embed URL for maps section.
 

@@ -30,13 +30,13 @@
   function getBusinessInfo() {
     const business = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.business) ? SITE_CONFIG.business : {};
     return {
-      name: business.name || 'ANAMIKA SWEETS',
-      tagline: business.tagline || 'SAFFRON LOUNGE',
+      name: business.name || 'Pizzariya Town',
+      tagline: business.tagline || 'MIRZAPUR NOTTA',
       logo: business.logo || 'images/logo.png',
-      helpline: business.helpline || '+91 97602 92999',
-      email: business.email || 'info@anamikasweets.com',
-      addressLine1: business.addressLine1 || 'Hasanpur Chungi, Delhi Road',
-      addressLine2: business.addressLine2 || 'Saharanpur, Uttar Pradesh, 247001'
+      helpline: business.helpline || '7858062571',
+      email: business.email || 'info@pizzariyatown.com',
+      addressLine1: business.addressLine1 || 'Mirzapur Notta',
+      addressLine2: business.addressLine2 || ''
     };
   }
 
@@ -111,13 +111,13 @@
 
     const elapsedSeconds = (Date.now() - new Date(order.createdAt).getTime()) / 1000;
     if (elapsedSeconds >= 120) {
-      return { step: 5, orderStatus: 'Completed', timelineLabel: 'Delivered', message: 'Your order was successfully delivered! Thank you for dining with Anamika Sweets.' };
+      return { step: 5, orderStatus: 'Completed', timelineLabel: 'Delivered', message: 'Your order was successfully delivered! Thank you for dining with Pizzariya Town.' };
     }
     if (elapsedSeconds >= 75) {
       return { step: 4, orderStatus: 'Preparing', timelineLabel: 'Out For Delivery', message: 'Our delivery partner is on the way to your doorstep. Keep your mobile nearby.' };
     }
     if (elapsedSeconds >= 40) {
-      return { step: 3, orderStatus: 'Preparing', timelineLabel: 'Preparing Order', message: 'Our Saffron Lounge chefs are handcrafting your sweets and mains now.' };
+      return { step: 3, orderStatus: 'Preparing', timelineLabel: 'Preparing Order', message: 'Our Pizzariya Town chefs are handcrafting your sweets and mains now.' };
     }
     if (elapsedSeconds >= 15) {
       return { step: 2, orderStatus: 'Pending', timelineLabel: 'Order Confirmed', message: 'Gourmet items checked. Order approved and sent to kitchen prep area.' };
@@ -582,7 +582,7 @@
                 <h1>${escapeHtml(business.name)}</h1>
                 <p>${escapeHtml(business.tagline)}</p>
                 <p>${escapeHtml(business.addressLine1)}</p>
-                <p>${escapeHtml(business.addressLine2)}</p>
+                ${business.addressLine2 ? `<p>${escapeHtml(business.addressLine2)}</p>` : ''}
                 <p>Phone: ${escapeHtml(business.helpline)}</p>
                 <p>Email: ${escapeHtml(business.email)}</p>
               </div>
@@ -775,7 +775,7 @@
         if (typeof sendEmail === 'function') {
           const itemsText = products.map(product => `- ${product.name} (Qty: ${product.qty}) - ${formatCurrency(product.lineTotal)}`).join('\n');
           sendEmail({
-            _subject: `New Anamika Sweets Order [ID: ${order.orderId}]`,
+            _subject: `New Pizzariya Town Order [ID: ${order.orderId}]`,
             _template: 'box',
             order_id: order.orderId,
             customer_name: customer.name,

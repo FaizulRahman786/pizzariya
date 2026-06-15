@@ -1,4 +1,4 @@
-# Anamika Sweets — Premium Reusable Frontend Template
+# Pizzariya Town — Premium Reusable Frontend Template
 
 A premium, highly interactive, and responsive white-label frontend template designed specifically for sweet shops, bakeries, cafes, and local restaurants. Created with a focus on rich aesthetics, premium user animations, Core Web Vitals performance, and marketplace quality, this template is ready to sell for ₹15,000–₹25,000+.
 

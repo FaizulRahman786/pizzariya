@@ -1,5 +1,5 @@
 /* 
-   ANAMIKA SWEETS - Shared Notification Center Engine (notifications.js)
+   Pizzariya Town - Shared Notification Center Engine (notifications.js)
    Manages notification lifecycle, dynamic order status updates, localStorage persistence,
    badge counts, bell animations, and the unified responsive dropdown/drawer UI.
 */
@@ -31,7 +31,7 @@
           id: 'NOTIF-INIT-1',
           userId: 'guest',
           type: 'SYSTEM',
-          title: 'Welcome to Saffron Lounge!',
+          title: 'Welcome to Pizzariya Town!',
           message: 'Explore our premium hand-crafted sweets, fine dining reservation system, and dynamic order tracking.',
           readStatus: 'unread',
           createdAt: new Date(Date.now() - 3600000).toISOString() // 1 hour ago

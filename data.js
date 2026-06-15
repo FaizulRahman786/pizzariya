@@ -1,5 +1,5 @@
 /* 
-   ANAMIKA SWEETS - Centralized Data & Configuration
+   Pizzariya Town - Centralized Data & Configuration
    This file consolidates all restaurant settings, menu items, gallery details, and pricing structures
    to make customization simple and code maintainable.
 */
@@ -8,22 +8,22 @@
 // RESTAURANT_INFO is kept as a legacy convenience alias for backward compatibility with any custom templates.
 // Template buyers should ONLY edit config.js to customize their business information.
 const RESTAURANT_INFO = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG.business : {
-  name: "BUSINESS NAME",
-  tagline: "Your Tagline",
-  helpline: "+91 00000 00000",
-  whatsapp: "+91 00000 00000",
-  whatsappText: "Namaste! I would like to order.",
-  email: "info@yourbusiness.com",
-  supportEmail: "support@yourbusiness.com",
-  addressLine1: "Your Street Address",
-  addressLine2: "Your City, State, PIN",
+  name: "Pizzariya Town",
+  tagline: "MIRZAPUR NOTTA",
+  helpline: "7858062571",
+  whatsapp: "7858062571",
+  whatsappText: "Namaste! I would like to order from Pizzariya Town.",
+  email: "info@pizzariyatown.com",
+  supportEmail: "support@pizzariyatown.com",
+  addressLine1: "Mirzapur Notta",
+  addressLine2: "",
   openingHoursDays: "Monday - Sunday",
   openingHoursTime: "10:00 AM - 10:00 PM",
   social: {
-    facebook: "https://www.facebook.com/anamikasweets",
-    instagram: "https://www.instagram.com/anamikasweets",
-    twitter: "https://x.com/anamikasweets",
-    youtube: "https://www.youtube.com/@anamikasweets"
+    facebook: "https://www.facebook.com/pizzariyatown",
+    instagram: "https://www.instagram.com/pizzariyatown",
+    twitter: "https://x.com/pizzariyatown",
+    youtube: "https://www.youtube.com/@pizzariyatown"
   }
 };
 
@@ -86,7 +86,7 @@ const DISHES_CATALOG = [
 
 const GALLERY_CATALOG = {
   "gal-1": { 
-    title: "Saffron Lounge Dining Hall", 
+    title: "Pizzariya Town Dining Hall", 
     badge: "Ambiance", 
     category: "ambiance",
     image: "images/gallery_interior.png",

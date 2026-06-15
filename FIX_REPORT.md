@@ -1,4 +1,4 @@
-# Anamika Sweets Audit Fix Report
+# Pizzariya Town Audit Fix Report
 
 All line numbers below refer to the corrected files in `10000/`.
 
@@ -24,7 +24,7 @@ Line ranges:
 Representative corrected block:
 
 ```html
-<title>ANAMIKA SWEETS — Premium Bakery & Restaurant</title>
+<title>Pizzariya Town — Premium Bakery & Restaurant</title>
 ```
 
 ## 1B Sitemap + Robots Domain
@@ -32,19 +32,19 @@ Representative corrected block:
 `sitemap.xml:4-40`
 
 ```xml
-<loc>https://anamisweat.vercel.app/index.html</loc>
-<loc>https://anamisweat.vercel.app/about.html</loc>
-<loc>https://anamisweat.vercel.app/menu.html</loc>
-<loc>https://anamisweat.vercel.app/packages.html</loc>
-<loc>https://anamisweat.vercel.app/testimonials.html</loc>
-<loc>https://anamisweat.vercel.app/gallery.html</loc>
-<loc>https://anamisweat.vercel.app/reserve.html</loc>
+<loc>https://pizzariyatown.vercel.app/index.html</loc>
+<loc>https://pizzariyatown.vercel.app/about.html</loc>
+<loc>https://pizzariyatown.vercel.app/menu.html</loc>
+<loc>https://pizzariyatown.vercel.app/packages.html</loc>
+<loc>https://pizzariyatown.vercel.app/testimonials.html</loc>
+<loc>https://pizzariyatown.vercel.app/gallery.html</loc>
+<loc>https://pizzariyatown.vercel.app/reserve.html</loc>
 ```
 
 `robots.txt:8`
 
 ```txt
-Sitemap: https://anamisweat.vercel.app/sitemap.xml
+Sitemap: https://pizzariyatown.vercel.app/sitemap.xml
 ```
 
 ## 1C Open Graph + Twitter Cards
@@ -62,16 +62,16 @@ Representative corrected block:
 
 ```html
 <meta property="og:type" content="restaurant">
-<meta property="og:site_name" content="Anamika Sweets">
+<meta property="og:site_name" content="Pizzariya Town">
 <meta property="og:locale" content="en_IN">
-<meta property="og:title" content="ANAMIKA SWEETS — Premium Bakery & Restaurant">
-<meta property="og:description" content="Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
-<meta property="og:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
-<meta property="og:url" content="https://anamisweat.vercel.app/">
+<meta property="og:title" content="Pizzariya Town — Premium Bakery & Restaurant">
+<meta property="og:description" content="Mirzapur Notta's finest destination for premium sweets, fine bakery items, North Indian cuisine, and party packages.">
+<meta property="og:image" content="https://pizzariyatown.vercel.app/green_messenger_preview.png">
+<meta property="og:url" content="https://pizzariyatown.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ANAMIKA SWEETS — Premium Bakery & Restaurant">
-<meta name="twitter:description" content="Saharanpur's finest premium sweets, bakery & restaurant.">
-<meta name="twitter:image" content="https://anamisweat.vercel.app/green_messenger_preview.png">
+<meta name="twitter:title" content="Pizzariya Town — Premium Bakery & Restaurant">
+<meta name="twitter:description" content="Mirzapur Notta's finest premium sweets, bakery & restaurant.">
+<meta name="twitter:image" content="https://pizzariyatown.vercel.app/green_messenger_preview.png">
 ```
 
 ## 1D Canonical Links
@@ -80,19 +80,19 @@ Added to all pages:
 
 | File | Line | URL |
 | --- | ---: | --- |
-| `index.html` | `29` | `https://anamisweat.vercel.app/` |
-| `about.html` | `26` | `https://anamisweat.vercel.app/about.html` |
-| `cart.html` | `26` | `https://anamisweat.vercel.app/cart.html` |
-| `gallery.html` | `26` | `https://anamisweat.vercel.app/gallery.html` |
-| `likes.html` | `27` | `https://anamisweat.vercel.app/likes.html` |
-| `menu.html` | `26` | `https://anamisweat.vercel.app/menu.html` |
-| `packages.html` | `26` | `https://anamisweat.vercel.app/packages.html` |
-| `profile.html` | `26` | `https://anamisweat.vercel.app/profile.html` |
-| `reserve.html` | `26` | `https://anamisweat.vercel.app/reserve.html` |
-| `testimonials.html` | `26` | `https://anamisweat.vercel.app/testimonials.html` |
+| `index.html` | `29` | `https://pizzariyatown.vercel.app/` |
+| `about.html` | `26` | `https://pizzariyatown.vercel.app/about.html` |
+| `cart.html` | `26` | `https://pizzariyatown.vercel.app/cart.html` |
+| `gallery.html` | `26` | `https://pizzariyatown.vercel.app/gallery.html` |
+| `likes.html` | `27` | `https://pizzariyatown.vercel.app/likes.html` |
+| `menu.html` | `26` | `https://pizzariyatown.vercel.app/menu.html` |
+| `packages.html` | `26` | `https://pizzariyatown.vercel.app/packages.html` |
+| `profile.html` | `26` | `https://pizzariyatown.vercel.app/profile.html` |
+| `reserve.html` | `26` | `https://pizzariyatown.vercel.app/reserve.html` |
+| `testimonials.html` | `26` | `https://pizzariyatown.vercel.app/testimonials.html` |
 
 ```html
-<link rel="canonical" href="https://anamisweat.vercel.app/">
+<link rel="canonical" href="https://pizzariyatown.vercel.app/">
 ```
 
 ## 1E Description Typo
@@ -100,7 +100,7 @@ Added to all pages:
 `config.js:38`
 
 ```js
-description: "ANAMIKA SWEETS - Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and celebratory party packages.",
+description: "Pizzariya Town - Mirzapur Notta's finest destination for premium sweets, fine bakery items, North Indian cuisine, and celebratory party packages.",
 ```
 
 ## 1F Dead Social Links
@@ -108,10 +108,10 @@ description: "ANAMIKA SWEETS - Saharanpur's finest destination for premium sweet
 `components/footer.html:10-13`, plus runtime config `config.js:21-24` and `data.js:23-26`.
 
 ```html
-<a href="https://www.facebook.com/anamikasweets" aria-label="Facebook" class="social-link-facebook"><i class="fa-brands fa-facebook-f"></i></a>
-<a href="https://www.instagram.com/anamikasweets" aria-label="Instagram" class="social-link-instagram"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://x.com/anamikasweets" aria-label="Twitter" class="social-link-twitter"><i class="fa-brands fa-twitter"></i></a>
-<a href="https://www.youtube.com/@anamikasweets" aria-label="YouTube" class="social-link-youtube"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://www.facebook.com/pizzariyatown" aria-label="Facebook" class="social-link-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/pizzariyatown" aria-label="Instagram" class="social-link-instagram"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://x.com/pizzariyatown" aria-label="Twitter" class="social-link-twitter"><i class="fa-brands fa-twitter"></i></a>
+<a href="https://www.youtube.com/@pizzariyatown" aria-label="YouTube" class="social-link-youtube"><i class="fa-brands fa-youtube"></i></a>
 ```
 
 ## 1G FSSAI Placeholder
@@ -196,7 +196,7 @@ Static below-fold images and generated images now include `loading="lazy"`, `dec
 `gallery.html:133`
 
 ```html
-<img src="images/gallery_interior.png" alt="Saffron Lounge Dining Hall" loading="lazy" decoding="async" width="1024" height="1024">
+<img src="images/gallery_interior.png" alt="Pizzariya Town Dining Hall" loading="lazy" decoding="async" width="1024" height="1024">
 ```
 
 `script.js:692`
@@ -275,13 +275,13 @@ navLinks.classList.toggle('active');
 `components/navbar.html:3`
 
 ```html
-<img src="images/logo.png" alt="Anamika Sweets — Saffron Lounge" class="logo-img" id="nav-logo-img" decoding="async" width="1024" height="1024">
+<img src="images/logo.png" alt="Pizzariya Town — Pizzariya Town" class="logo-img" id="nav-logo-img" decoding="async" width="1024" height="1024">
 ```
 
 `components/footer.html:5`
 
 ```html
-<img src="images/logo.png" alt="Anamika Sweets — Saffron Lounge" class="footer-logo-img" id="footer-logo-img" loading="lazy" decoding="async" width="1024" height="1024">
+<img src="images/logo.png" alt="Pizzariya Town — Pizzariya Town" class="footer-logo-img" id="footer-logo-img" loading="lazy" decoding="async" width="1024" height="1024">
 ```
 
 ## 3D Newsletter Label
@@ -385,7 +385,7 @@ The second reassignment was deleted.
 `index.html:550-552`, `reserve.html:296`
 
 ```html
-<p class="modal-subtitle">Your reservation request has been saved. Please call us at +91 97602 92999 or WhatsApp us to confirm your booking.</p>
+<p class="modal-subtitle">Your reservation request has been saved. Please call us at 7858062571 or WhatsApp us to confirm your booking.</p>
 ```
 
 ## Verification Summary

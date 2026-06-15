@@ -1,5 +1,5 @@
 /*
-   ANAMIKA SWEETS - Lightweight Hindi/English Translation System (translations.js)
+   Pizzariya Town - Lightweight Hindi/English Translation System (translations.js)
    Enables seamless language switching for key labels, titles, CTA buttons, and form inputs.
 */
 

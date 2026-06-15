@@ -1,4 +1,4 @@
-# PowerShell Static HTTP Server for Anamika Sweets Template
+# PowerShell Static HTTP Server for Pizzariya Town Template
 # Usage: powershell -ExecutionPolicy Bypass -File serve.ps1
 # Serves on http://localhost:8080
 

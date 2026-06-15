@@ -1,5 +1,5 @@
 /* 
-   ANAMIKA SWEETS - Premium UI/UX Interactions & Logic
+   Pizzariya Town - Premium UI/UX Interactions & Logic
    Dynamic menu rendering, active filters, banners slider, theme switching, and local notifications.
 */
 
@@ -85,7 +85,7 @@ function handleImageError(img) {
       wrapper.appendChild(placeholder);
     }
   } else {
-    img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="100%" height="100%" fill="%23f97316"/><circle cx="150" cy="90" r="35" fill="none" stroke="%23fbbf24" stroke-width="3"/><path d="M135 90h30M150 75v30" stroke="%23fbbf24" stroke-width="3"/><text x="50%" y="155" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="bold" font-size="16" fill="white">ANAMIKA SWEETS</text><text x="50%" y="175" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="10" fill="%23fef3c7" letter-spacing="2">SAFFRON LOUNGE</text></svg>`;
+    img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="100%" height="100%" fill="%23f97316"/><circle cx="150" cy="90" r="35" fill="none" stroke="%23fbbf24" stroke-width="3"/><path d="M135 90h30M150 75v30" stroke="%23fbbf24" stroke-width="3"/><text x="50%" y="155" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="bold" font-size="16" fill="white">Pizzariya Town</text><text x="50%" y="175" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="10" fill="%23fef3c7" letter-spacing="2">MIRZAPUR NOTTA</text></svg>`;
   }
 }
 
@@ -116,22 +116,22 @@ function initImageFallbacks() {
 function initDynamicRestaurantInfo() {
   const config = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : {
     business: {
-      name: "ANAMIKA SWEETS",
-      tagline: "SAFFRON LOUNGE",
-      helpline: "+91 97602 92999",
-      whatsapp: "+91 78580 62571",
-      whatsappText: "Namaste! I would like to order sweets from Anamika Sweets.",
-      email: "info@anamikasweets.com",
-      supportEmail: "support@anamikasweets.com",
-      addressLine1: "Hasanpur Chungi, Delhi Road",
-      addressLine2: "Saharanpur, Uttar Pradesh, 247001",
+      name: "Pizzariya Town",
+      tagline: "MIRZAPUR NOTTA",
+      helpline: "7858062571",
+      whatsapp: "7858062571",
+      whatsappText: "Namaste! I would like to order from Pizzariya Town.",
+      email: "info@pizzariyatown.com",
+      supportEmail: "support@pizzariyatown.com",
+      addressLine1: "Mirzapur Notta",
+      addressLine2: "",
       openingHoursDays: "Monday - Sunday",
       openingHoursTime: "11:30 AM - 11:30 PM",
       social: {
-        facebook: "https://www.facebook.com/anamikasweets",
-        instagram: "https://www.instagram.com/anamikasweets",
-        twitter: "https://x.com/anamikasweets",
-        youtube: "https://www.youtube.com/@anamikasweets"
+        facebook: "https://www.facebook.com/pizzariyatown",
+        instagram: "https://www.instagram.com/pizzariyatown",
+        twitter: "https://x.com/pizzariyatown",
+        youtube: "https://www.youtube.com/@pizzariyatown"
       },
       googleMapsLink: "https://maps.google.com"
     },
@@ -252,23 +252,24 @@ function initDynamicRestaurantInfo() {
   const addressParagraphs = document.querySelectorAll('.footer-about p, .contact-text p, #footer-about-text');
   addressParagraphs.forEach(p => {
     if (p.id === 'footer-about-text') {
-      const cityHint = business.addressLine2 ? business.addressLine2.split(',')[0].trim() : 'our city';
+      const cityHint = business.addressLine2 ? business.addressLine2.split(',')[0].trim() : (business.addressLine1 || 'our city');
       p.textContent = `${business.name} - ${cityHint}'s premium reference point for high quality traditional sweets, fine dining tables, and party celebrations.`;
-    } else if (p.textContent.includes('Hasanpur Chungi') || p.innerHTML.includes('Hasanpur Chungi')) {
-      // Check if there is a next sibling <p> that has Saharanpur or Uttar Pradesh
+    } else if (p.textContent.includes('Mirzapur Notta') || p.innerHTML.includes('Mirzapur Notta')) {
+      // Check whether the legacy second address line is present.
       const nextSibling = p.nextElementSibling;
-      if (nextSibling && nextSibling.tagName.toLowerCase() === 'p' && (nextSibling.textContent.includes('Saharanpur') || nextSibling.textContent.includes('Uttar Pradesh') || nextSibling.textContent.includes('247001'))) {
+      if (nextSibling && nextSibling.tagName.toLowerCase() === 'p' && nextSibling.textContent.includes('Mirzapur Notta')) {
         p.textContent = business.addressLine1;
-        nextSibling.textContent = business.addressLine2;
+        nextSibling.textContent = business.addressLine2 || '';
+        nextSibling.style.display = business.addressLine2 ? '' : 'none';
       } else {
         // Single paragraph address
         const icon = p.querySelector('i');
         if (icon) {
           p.innerHTML = '';
           p.appendChild(icon);
-          p.appendChild(document.createTextNode(` ${business.addressLine1}, ${business.addressLine2}`));
+          p.appendChild(document.createTextNode(` ${[business.addressLine1, business.addressLine2].filter(Boolean).join(', ')}`));
         } else {
-          p.innerHTML = `${business.addressLine1}<br>${business.addressLine2}`;
+          p.innerHTML = [business.addressLine1, business.addressLine2].filter(Boolean).join('<br>');
         }
       }
     }
@@ -565,7 +566,7 @@ function bindNewsletterClicks() {
       
       showToast("Sending newsletter subscription details...", "info");
       const emailData = {
-        _subject: "New Anamika Sweets Newsletter Subscription!",
+        _subject: "New Pizzariya Town Newsletter Subscription!",
         _template: "box",
         subscriber_email: email,
         timestamp: new Date().toLocaleString()
@@ -672,7 +673,7 @@ function renderMenu(filter = activeCategory) {
     const isInCart = cart[dish.id] ? inCartText : addToCartText;
     const isCartBtnActive = cart[dish.id] ? 'style="background:var(--primary); color:white; border-color:var(--primary)"' : '';
     
-    const _cfg = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : { business: { name: "Anamika Sweets", whatsapp: "917858062571", whatsappText: "Namaste! I would like to order." } };
+    const _cfg = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : { business: { name: "Pizzariya Town", whatsapp: "7858062571", whatsappText: "Namaste! I would like to order." } };
     const waPhone = _cfg.business.whatsapp.replace(/[^0-9]/g, '');
     const itemText = `Namaste! I would like to order or enquire about *${dish.name}* (Price: \u20B9${dish.price}) from ${_cfg.business.name}.`;
     const waShareUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(itemText)}`;
@@ -1186,7 +1187,7 @@ function bindCheckoutAction() {
         });
         
         const _cfg = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG.business : {};
-        const _bizName = _cfg.name || 'BUSINESS NAME';
+        const _bizName = _cfg.name || 'Pizzariya Town';
         const _bizAddr = `${_cfg.addressLine1 || ''}, ${_cfg.addressLine2 || ''}`.trim().replace(/^,\s*/, '');
         const _helpline = _cfg.helpline || 'Contact us';
         const receiptText = `====================================\n  ${_bizName} — ORDER RECEIPT\n  ${_bizAddr}\n====================================\nTransaction Type: Gourmet Takeaway\nOrder Ref: ${ref}\nDate: ${timestamp}\n------------------------------------\nItems Ordered:\n${itemsText}\n------------------------------------\nSubtotal Amount: ₹${subtotal}\nDelivery: FREE (Promo)\nTotal Paid: ₹${subtotal}\n------------------------------------\nStatus: Preparing / Dispatched\n------------------------------------\nThank you for your order!\nFresh delicacies prepared with care.\nSupport Helpline: ${_helpline}\n====================================`;
@@ -1252,7 +1253,7 @@ function bindReservationSubmit() {
       const timestamp = new Date().toLocaleString();
       
       const _rcfg = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG.business : {};
-      const _rbizName = _rcfg.name || 'BUSINESS NAME';
+      const _rbizName = _rcfg.name || 'Pizzariya Town';
       const _rbizAddr = `${_rcfg.addressLine1 || ''}, ${_rcfg.addressLine2 || ''}`.trim().replace(/^,\s*/, '');
       const _rhelpline = _rcfg.helpline || 'Contact us';
       const receiptText = `====================================\n  ${_rbizName} — TABLE RESERVATION\n  ${_rbizAddr}\n====================================\nTransaction Type: Table Seating\nBooking Ref: ${ref}\nDate: ${timestamp}\n------------------------------------\nCustomer Name: ${name}\nPhone: ${phone}\nSeating Date: ${date}\nSeating Time: ${time}\nGuests: ${guests}\nCategory: ${packageType}\nSelected Table: ${tableSelected}\n------------------------------------\nSpecial Kitchen Requests:\n${requests || 'None'}\n------------------------------------\nThank you for celebrating with us!\nA coordinator will call you shortly.\nSupport Helpline: ${_rhelpline}\n====================================`;
@@ -2432,10 +2433,10 @@ function initGreenMessenger() {
       const query = queryText.toLowerCase().trim();
       const config = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : { business: {} };
       const biz = config.business || {};
-      const bizName = biz.name || "ANAMIKA SWEETS";
-      const bizAddr = `${biz.addressLine1 || "Hasanpur Chungi, Delhi Road"}, ${biz.addressLine2 || "Saharanpur, Uttar Pradesh"}`;
-      const helpline = biz.helpline || "+91 97602 92999";
-      const whatsapp = biz.whatsapp || "+91 78580 62571";
+      const bizName = biz.name || "Pizzariya Town";
+      const bizAddr = [biz.addressLine1 || "Mirzapur Notta", biz.addressLine2 || ""].filter(Boolean).join(", ");
+      const helpline = biz.helpline || "7858062571";
+      const whatsapp = biz.whatsapp || "7858062571";
       const hours = biz.openingHoursTime || "11:30 AM - 11:30 PM";
 
       // 1. Check for specific menu items in DISHES_CATALOG
@@ -2451,7 +2452,7 @@ function initGreenMessenger() {
 
       // 2. Greetings and Small Talk
       if (/\b(hi|hello|hey|namaste|greetings|good morning|good afternoon|good evening|pranam|yo|hola)\b/.test(query)) {
-        return `Namaste! Welcome to <strong>${bizName} Saffron Lounge</strong>. 🙏 I am your Gourmet Advisor AI. Ask me anything about our premium sweets, menu items, table reservations, or catering packages! How may I assist you today?`;
+        return `Namaste! Welcome to <strong>${bizName}</strong>. 🙏 I am your Gourmet Advisor AI. Ask me anything about our premium sweets, menu items, table reservations, or catering packages! How may I assist you today?`;
       }
       
       if (query.includes('how are you') || query.includes('how\'s it going') || query.includes('how do you do')) {
@@ -2502,20 +2503,20 @@ You can choose your preferred slot, date, and table model, and submit a reservat
       }
 
       // 6. Location, Address and Directions
-      if (query.includes('location') || query.includes('address') || query.includes('where') || query.includes('direction') || query.includes('map') || query.includes('city') || query.includes('place') || query.includes('locate') || query.includes('reach') || query.includes('saharanpur')) {
-        return `Our Saffron Lounge is located at:
-<strong>${bizAddr}</strong> (near Hasanpur Chungi).
+      if (query.includes('location') || query.includes('address') || query.includes('where') || query.includes('direction') || query.includes('map') || query.includes('city') || query.includes('place') || query.includes('locate') || query.includes('reach')) {
+        return `Our Pizzariya Town is located at:
+<strong>${bizAddr}</strong>.
 You can view directions and interactive Google Maps by scrolling to the bottom of the page or in the footer!`;
       }
 
       // 7. Contact, Phone and WhatsApp
       if (query.includes('phone') || query.includes('number') || query.includes('contact') || query.includes('call') || query.includes('whatsapp') || query.includes('helpline') || query.includes('email') || query.includes('support') || query.includes('talk') || query.includes('owner') || query.includes('manager')) {
-        return `You can reach our manager directly at **${helpline}** or email us at **${biz.email || "info@anamikasweets.com"}**. For online orders, custom sweet boxes, or inquiries, click the **WhatsApp** button at the bottom of your screen to chat instantly with our staff (${whatsapp})!`;
+        return `You can reach our manager directly at **${helpline}** or email us at **${biz.email || "info@pizzariyatown.com"}**. For online orders, custom sweet boxes, or inquiries, click the **WhatsApp** button at the bottom of your screen to chat instantly with our staff (${whatsapp})!`;
       }
 
       // 10. Delivery / Home Delivery / Shipping
       if (query.includes('deliver') || query.includes('home delivery') || query.includes('shipping') || query.includes('cod') || query.includes('order online') || query.includes('delivery charge') || query.includes('swiggy') || query.includes('zomato')) {
-        return `Yes, we offer **home delivery** across Saharanpur! You can browse our items and add them to your cart. Once ready, click the checkout button to send your order details directly to our team via WhatsApp. Delivery is free for orders above ₹500.`;
+        return `Yes, we offer **home delivery** across Mirzapur Notta! You can browse our items and add them to your cart. Once ready, click the checkout button to send your order details directly to our team via WhatsApp. Delivery is free for orders above ₹500.`;
       }
 
       // 11. Payment Methods
@@ -2539,11 +2540,11 @@ Browse our pre-configured options on the <a href="packages.html">Party Packages<
 
       // 12. History / Since / Owner / Cleanliness / Hygiene / Reviews
       if (query.includes('history') || query.includes('since') || query.includes('old') || query.includes('established') || query.includes('year') || query.includes('clean') || query.includes('hygiene') || query.includes('license') || query.includes('fssai') || query.includes('rating') || query.includes('review') || query.includes('stars')) {
-        return `<strong>${bizName}</strong> was established in **1995** and has been Saharanpur's finest culinary destination for over 30 years. We hold a 4.8-star Google rating (500+ reviews), are FSSAI certified, and maintain the absolute highest standards of hygiene and pure vegetarian kitchen operations.`;
+        return `<strong>${bizName}</strong> was established in **1995** and has been Mirzapur Notta's finest culinary destination for over 30 years. We hold a 4.8-star Google rating (500+ reviews), are FSSAI certified, and maintain the absolute highest standards of hygiene and pure vegetarian kitchen operations.`;
       }
 
       if (query.includes('gallery') || query.includes('photo') || query.includes('picture') || query.includes('image') || query.includes('interior') || query.includes('ambiance') || query.includes('kitchen')) {
-        return `You can view high-quality photos of our luxury Saffron Lounge interior, traditional arch entrance, hot tandoor operations, and sweet counters on our dedicated <a href="gallery.html">Gallery</a> page!`;
+        return `You can view high-quality photos of our luxury Pizzariya Town interior, traditional arch entrance, hot tandoor operations, and sweet counters on our dedicated <a href="gallery.html">Gallery</a> page!`;
       }
 
       if (query.includes('testimonial') || query.includes('reviews') || query.includes('what people say') || query.includes('customer feedback')) {
@@ -2563,7 +2564,7 @@ Browse our pre-configured options on the <a href="packages.html">Party Packages<
       }
 
       if (query.includes('bye') || query.includes('goodbye') || query.includes('see you') || query.includes('exit')) {
-        return `Goodbye! Have a sweet and wonderful day ahead. Hope to see you at the Saffron Lounge soon! 🙏 Representative contact: ${helpline}.`;
+        return `Goodbye! Have a sweet and wonderful day ahead. Hope to see you at the Pizzariya Town soon! 🙏 Representative contact: ${helpline}.`;
       }
 
       // 15. Generative fallback (smarter ChatGPT-like fallback statement)

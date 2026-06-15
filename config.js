@@ -1,29 +1,29 @@
 /* 
-   ANAMIKA SWEETS - Centralized Template Configuration (config.js)
+   Pizzariya Town - Centralized Template Configuration (config.js)
    Edit this single file to customize branding, SEO, trust badges, contacts, and hours.
 */
 
 const SITE_CONFIG = {
   business: {
-    name: "ANAMIKA SWEETS",
-    tagline: "SAFFRON LOUNGE",
+    name: "Pizzariya Town",
+    tagline: "MIRZAPUR NOTTA",
     logo: "images/logo.png",
-    helpline: "+91 97602 92999",
-    whatsapp: "+91 78580 62571",
-    whatsappText: "Namaste! I would like to order sweets from Anamika Sweets.",
-    email: "info@anamikasweets.com",
-    supportEmail: "support@anamikasweets.com",
-    addressLine1: "Hasanpur Chungi, Delhi Road",
-    addressLine2: "Saharanpur, Uttar Pradesh, 247001",
+    helpline: "7858062571",
+    whatsapp: "7858062571",
+    whatsappText: "Namaste! I would like to order from Pizzariya Town.",
+    email: "info@pizzariyatown.com",
+    supportEmail: "support@pizzariyatown.com",
+    addressLine1: "Mirzapur Notta",
+    addressLine2: "",
     openingHoursDays: "Monday - Sunday",
     openingHoursTime: "11:30 AM - 11:30 PM",
     social: {
-      facebook: "https://www.facebook.com/anamikasweets",
-      instagram: "https://www.instagram.com/anamikasweets",
-      twitter: "https://x.com/anamikasweets",
-      youtube: "https://www.youtube.com/@anamikasweets"
+      facebook: "https://www.facebook.com/pizzariyatown",
+      instagram: "https://www.instagram.com/pizzariyatown",
+      twitter: "https://x.com/pizzariyatown",
+      youtube: "https://www.youtube.com/@pizzariyatown"
     },
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.0201174984534!2d77.52554767626947!3d29.950153474971268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eeb6ad8043681%3A0xc304be359873d1f1!2sDelhi%20Rd%2C%20Hasanpur%20Chungi%2C%20Saharanpur%2C%20Uttar%20Pradesh%20247001!5e0!3m2!1sen!2sin!4v1716982929999!5m2!1sen!2sin",
+    googleMapsEmbed: "https://www.google.com/maps?q=Mirzapur%20Notta&output=embed",
     googleMapsLink: "https://maps.google.com"
   },
   branding: {
@@ -34,9 +34,9 @@ const SITE_CONFIG = {
     fontMain: "'Outfit', sans-serif"
   },
   seo: {
-    title: "ANAMIKA SWEETS — Premium Bakery & Restaurant",
-    description: "ANAMIKA SWEETS - Saharanpur's finest destination for premium sweets, fine bakery items, North Indian cuisine, and celebratory party packages.",
-    keywords: "Anamika Sweets, Saharanpur sweets shop, local bakery, party packages, fine dining reservation",
+    title: "Pizzariya Town — Premium Bakery & Restaurant",
+    description: "Pizzariya Town - Mirzapur Notta's finest destination for premium sweets, fine bakery items, North Indian cuisine, and celebratory party packages.",
+    keywords: "Pizzariya Town, Mirzapur Notta sweets shop, local bakery, party packages, fine dining reservation",
     ogImage: "green_messenger_preview.png"
   },
   trust: {

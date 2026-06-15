@@ -1,5 +1,5 @@
 /*
-   ANAMIKA SWEETS - Structured Schema.org JSON-LD Generator (schema.js)
+   Pizzariya Town - Structured Schema.org JSON-LD Generator (schema.js)
    Generates local SEO restaurant metadata schema matching Google's specifications.
    All address fields are pulled from SITE_CONFIG (config.js) — no hardcoded city/state/pin.
 */
@@ -7,12 +7,12 @@
 window.addEventListener('LayoutComponentsLoaded', () => {
   const config = (typeof SITE_CONFIG !== 'undefined') ? SITE_CONFIG : {
     business: {
-      name: "ANAMIKA SWEETS",
+      name: "Pizzariya Town",
       logo: "images/logo.png",
-      helpline: "+91 97602 92999",
-      email: "info@anamikasweets.com",
-      addressLine1: "Hasanpur Chungi, Delhi Road",
-      addressLine2: "Saharanpur, Uttar Pradesh, 247001",
+      helpline: "7858062571",
+      email: "info@pizzariyatown.com",
+      addressLine1: "Mirzapur Notta",
+      addressLine2: "",
       googleMapsLink: "https://maps.google.com"
     }
   };
