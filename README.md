@@ -45,3 +45,9 @@ A premium, highly interactive, and responsive white-label frontend template desi
 For full details on customizing styles, logo, products, and setting up SEO:
 - Refer to [CUSTOMIZATION.md](CUSTOMIZATION.md) for step-by-step branding instructions.
 - Refer to [STRUCTURE.md](STRUCTURE.md) to understand folder structures and component loading architecture.
+
+ ---
+
+## Live Preview
+
+- Refer to https://pizzeriatown.vercel.app/
